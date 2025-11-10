@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="600" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">MachedaTs</title>
+  <desc id="desc">A clean geometric M in deep purple with a cyan "ts" to the right</desc>
+  <defs>
+    <linearGradient id="mGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5E3BEF"/>
+      <stop offset="100%" stop-color="#3A1B7A"/>
+    </linearGradient>
+  </defs>
+  <path d="
+    M 30 160
+    L 30 40
+    L 80 40
+    L 100 100
+    L 120 40
+    L 170 40
+    L 170 160
+    L 140 160
+    L 140 80
+    L 115 160
+    L 85 160
+    L 60 80
+    L 60 160
+    Z
+  "
+    fill="url(#mGrad)"
+    stroke="#2B166A"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <g transform="translate(170,157)">
+    <text x="0" y="0"
+          font-family="Segoe UI, Roboto, Arial, sans-serif"
+          font-weight="700"
+          font-size="24"
+          fill="#00FFFF"
+          letter-spacing="-2"
+          dominant-baseline="middle"
+          text-anchor="start">
+      <tspan style="font-size:22px">T</tspan>
+      <tspan style="font-size:22px">S</tspan>
+    </text>
+  </g>
+</svg>

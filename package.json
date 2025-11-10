@@ -1,0 +1,29 @@
+{
+	"name": "macheda-ts",
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite --port 3000 --open",
+		"dev": "vite --port 3000 --open",
+		"build": "vite build",
+		"serve": "vite preview --open"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.1",
+		"@mui/material": "^7.3.5",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-router-dom": "^7.9.5"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.2",
+		"@types/react-dom": "^19.2.2",
+		"@vitejs/plugin-react": "^4.3.4",
+		"jsdom": "^26.0.0",
+		"typescript": "^5.9.3",
+		"vite": "^6.2.1",
+		"vite-plugin-pages": "^0.33.1",
+		"vitest": "^3.0.8"
+	}
+}
