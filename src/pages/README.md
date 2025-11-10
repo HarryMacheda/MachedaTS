@@ -12,4 +12,6 @@ export default Home
 
 For layouts look at the readme inside the layouts directory
 
-You can also use variables in the routes by having square prackets 
+You can also use variables in the routes by having square brackets
+see [id].tsx
+layouts dont seem to work with these dynamic routes though so them may need to be imported directly 
