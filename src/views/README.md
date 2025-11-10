@@ -1,0 +1,2 @@
+## VIEWS
+Similar to a component (see the components folder), these should be reusable components that retrive data from an API or other external source. Eg a user profile icon that may load the users image from an api

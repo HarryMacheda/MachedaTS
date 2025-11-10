@@ -1,0 +1,2 @@
+## COMPONENTS
+This is the place for you components, these components should only interact with the other piecesof the application through properties, callbacks, contexts, refs, ect. Thsis excluseds things which may retive data from an api these should be in the "Views" folder
