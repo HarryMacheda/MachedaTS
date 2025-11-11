@@ -18,4 +18,7 @@ The routes are wrapped in the Main Layout in _mainLayout.tsx, this is the global
 ```
 root
 - users
+-- profile
+-- new
+- users.tsx
 ```
