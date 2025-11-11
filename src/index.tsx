@@ -7,51 +7,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppStorageProvider } from "./contexts/AppStorageContext";
-
-
-type ComponentWithLayout = React.ComponentType & {
-  layout?: React.ComponentType<{ children: React.ReactNode }>;
-};
-
-export function wrapRoutesWithLayout(routes: RouteObject[]): RouteObject[] {
-  return routes.map((route) => {
-    if (!route.element) return route;
-
-    let PageComponent: ComponentWithLayout | null = null;
-
-    if (React.isValidElement(route.element)) {
-      const type = route.element.type;
-      if (typeof type === "function") {
-        PageComponent = type as ComponentWithLayout;
-      }
-    }
-    if (!PageComponent) {
-      return route;
-    }
-
-    const Layout = PageComponent.layout ?? React.Fragment;
-
-    const wrappedRoute: RouteObject = {
-      ...route,
-      element: (
-        <Layout>
-          <PageComponent />
-        </Layout>
-      ),
-    };
-
-    if (route.children && route.children.length > 0) {
-      wrappedRoute.children = wrapRoutesWithLayout(route.children);
-    }
-
-    console.log(PageComponent, Layout, route)
-    return wrappedRoute;
-  });
-}
-
+import MainLayout from "./_mainLayout";
 
 const App = () => {
-  const element = useRoutes(wrapRoutesWithLayout(routes));
+  const element = useRoutes(routes);
   return element;
 };
 
@@ -64,9 +23,11 @@ root.render(
     <AppStorageProvider> {/*./contexts/AppStorageContext.tsx*/}
       <ThemeProvider theme={theme}> {/*./theme.ts*/}
         <CssBaseline />
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <MainLayout>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </MainLayout>
       </ThemeProvider>
     </AppStorageProvider>
   </React.StrictMode>

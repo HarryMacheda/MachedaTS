@@ -10,8 +10,12 @@ function Home() {
 export default Home
 ```
 
-For layouts look at the readme inside the layouts directory
-
 You can also use variables in the routes by having square brackets
 see [id].tsx
-layouts dont seem to work with these dynamic routes though so them may need to be imported directly 
+
+
+The routes are wrapped in the Main Layout in _mainLayout.tsx, this is the global layout file. For layouts for routs name them the same as the sub folder. 
+```
+root
+- users
+```
